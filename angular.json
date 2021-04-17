@@ -20,7 +20,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["hammerjs"],
+            "allowedCommonJsDependencies": [
+              "hammerjs"
+            ],
             "outputPath": "dist/devflix",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -124,6 +126,10 @@
               "devServerTarget": "devflix:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
