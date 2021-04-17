@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --select-color: #fff;
+  --select-focus: blue;
+	--ttf: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  color: #fdf6fe;
+	font-family: 'Poppins', sans-serif;
+}
+
+html, 
+body {
+	background: rgba(90,92,106,1);
+	background-repeat: no-repeat;
+	background: -webkit-radial-gradient( circle farthest-corner at 50% 30%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+	background: -moz-radial-gradient( circle farthest-corner at 50% 30%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+	background: -ms-radial-gradient( circle farthest-corner at 50% 30%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+	background: -o-radial-gradient( circle farthest-corner at 50% 30%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+	background: radial-gradient( circle farthest-corner at 50% 30%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+  min-height: 100vh;
+	height: 100%;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.ngucarousel-items .item .tile {
+	box-shadow: none;
+}
+
+img {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+a {
+	text-decoration: none;
+}

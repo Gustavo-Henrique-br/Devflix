@@ -1,0 +1,26 @@
+<section class="carousel">
+    <h1 class="carousel__title">{{ title }}</h1>
+    <ngu-carousel #movie_carousel  [inputs]="carousel" [dataSource]="movies">
+        <ngu-tile NgxCarouselItem *nguCarouselDef="let movie of movies">
+            <img 
+            src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" 
+            alt="{{ movie.title || movie.original_title }}" class="carousel__tile" />
+        </ngu-tile>
+        <button 
+            NguCarouselPrev 
+            class="carousel__btn leftRs" 
+        >
+                <span class="material-icons">chevron_left</span>
+        </button>
+        <button 
+            NguCarouselNext 
+            class="carousel__btn rightRs"
+        >
+            <span class="material-icons">chevron_right</span>
+        </button>
+        <!-- <ul class="myPoint" NguCarouselPoint>
+            <li *ngFor="let point of movie_carousel.pointNumbers;" [class.active]="point==movie_carousel.activePoint" (click)="movie_carousel.moveTo(point)"
+              [style.background]="'url(' + carouselTileItems[point] + ')'"></li>
+        </ul> -->
+    </ngu-carousel>
+</section>

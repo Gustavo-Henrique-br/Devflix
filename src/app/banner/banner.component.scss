@@ -1,0 +1,119 @@
+.banner {
+  position: relative;
+  width: 100vw;
+  @media (max-width: 768px) {
+    max-height: 90vh;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.0) 0%,
+      rgba(0, 0, 0, 0.0) 70%,
+      rgba(0, 0, 0, 0.2) 80%,
+      rgba(0, 0, 0, 0.7) 90%,
+      rgba(0, 0, 0, 0.9) 95%,
+      rgba(0, 0, 0, 1.0) 100%
+    );
+    background-size: 200%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    transform: translateY(100%);
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.0) 0%,
+      rgba(0, 0, 0, 0.0) 70%,
+      rgba(0, 0, 0, 0.2) 80%,
+      rgba(0, 0, 0, 0.7) 90%,
+      rgba(0, 0, 0, 0.9) 95%,
+      rgba(0, 0, 0, 1.0) 100%
+    );
+    background-size: 200%;
+  }
+}
+
+.banner__poster {
+  width: 100vw;
+  height: 100%;
+  @media (max-width: 768px) {
+    min-height: 70vh;
+  }
+  z-index: 0;
+  object-fit: cover;
+}
+
+.banner__about {
+  padding: 10% 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.banner__title {
+  font-weight: bold;
+  font-size: 10vw;
+  letter-spacing: -0.1rem;
+
+  @media (min-width: 500px) {
+    font-size: 5vw;
+  }
+}
+
+.banner__details {
+  margin: .7rem 0;
+  display: flex;
+  gap: .7rem;
+}
+
+.banner__label {
+  background-color: rgba(0, 0, 0,.7);
+  padding: .5rem 1rem;
+  font-size: 4vw;
+  border: 1px solid gray;
+  border-radius: 4px;
+
+  @media (min-width: 500px) {
+    font-size: 1.4vw;
+  }
+}
+
+.banner__description {
+  font-size: 4vw;
+  line-height: 120%;
+  word-wrap: break-word;
+  width: 150%;
+
+  @media (min-width: 500px) {
+    font-size: 2vw;
+    max-width: 350px;
+  }
+  
+}
+
+.banner__link {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #DB202C;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.banner__link .icon {
+  color: #DB202C;
+  padding-right: .5rem;
+}
+

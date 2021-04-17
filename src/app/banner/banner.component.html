@@ -1,0 +1,17 @@
+<section *ngIf="movie" class="banner">
+  <img 
+    src="https://image.tmdb.org/t/p/w1280{{ movie.backdrop_path }}" 
+    alt="{{ movie.title || movie.original_title }}" class="banner__poster" >
+  <div class="banner__about">
+    <h1 class="banner__title">{{ movie.title || movie.original_title }}</h1>
+    <small class="banner__details">
+      <p class="banner__label">{{ movie.original_language }}</p>
+      <p class="banner__label">{{ movie.release_date.substr(0,4) }}</p>
+    </small>
+    <p class="banner__description">{{ movie.overview }}</p>
+    <a class="banner__link" href="#">
+      <span class="material-icons icon">add</span>
+      <p>More</p>
+    </a>
+  </div>
+</section>
